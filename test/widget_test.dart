@@ -46,7 +46,7 @@ void main() {
     final text = find.text('UV Monitor').evaluate().single.widget as Text;
 
     // font-family: Poppins;
-    expect(text.style.fontFamily, 'Poppins_regular');
+    expect(text.style.fontFamily.toLowerCase().contains('poppins'), true);
 
     // font-style: normal;
     expect(text.style.fontStyle, FontStyle.normal);

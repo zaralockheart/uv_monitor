@@ -76,7 +76,7 @@ class Login extends HookWidget {
               child: Text(
                 S.of(context).appTitle,
                 textAlign: TextAlign.center,
-                style: _textTheme.display2.copyWith(
+                style: _textTheme.headline3.copyWith(
                   fontSize: 36,
                   color: orange,
                 ),

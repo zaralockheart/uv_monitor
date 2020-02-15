@@ -27,8 +27,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: backgroundColor,
           primarySwatch: Colors.blue,
           textTheme: TextTheme(
-            headline3: GoogleFonts.poppins(),
-            headline4: GoogleFonts.poppins(
+            headline3: GoogleFonts.poppins(
               fontStyle: FontStyle.normal,
               fontWeight: FontWeight.w500,
             ),
