@@ -41,6 +41,4 @@ class UpdateTime extends UvMonitorEvent {
 
   @override
   List<Object> get props => [currentTime];
-
-
 }

@@ -24,16 +24,18 @@ class Login extends HookWidget {
 
     Future<void> _handleGoogleSignIn() async {
       try {
-        final GoogleSignInAccount googleSignInAccount = await _googleSignIn.signIn();
+        final GoogleSignInAccount googleSignInAccount =
+            await _googleSignIn.signIn();
         final GoogleSignInAuthentication googleSignInAuthentication =
-        await googleSignInAccount.authentication;
+            await googleSignInAccount.authentication;
 
         final AuthCredential credential = GoogleAuthProvider.getCredential(
           accessToken: googleSignInAuthentication.accessToken,
           idToken: googleSignInAuthentication.idToken,
         );
 
-        final AuthResult authResult = await _auth.signInWithCredential(credential);
+        final AuthResult authResult =
+            await _auth.signInWithCredential(credential);
         final FirebaseUser user = authResult.user;
 
         assert(!user.isAnonymous);
@@ -44,19 +46,18 @@ class Login extends HookWidget {
         if (user.uid == currentUser.uid) {
           _navigateToHome();
         }
-      } catch (_) {
-      }
+      } catch (_) {}
     }
 
     Future<void> _autoSignIn() async {
       try {
-        final signInAccount = await _googleSignIn.signInSilently(suppressErrors: false);
+        final signInAccount =
+            await _googleSignIn.signInSilently(suppressErrors: false);
 
         if (signInAccount != null) {
           _navigateToHome();
         }
-      } catch (_) {
-      }
+      } catch (_) {}
     }
 
     useEffect(() {

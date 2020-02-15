@@ -6,12 +6,12 @@ extension MyContext on BuildContext {
   Future<T> push<T>({
     @required Widget target,
     @required String name,
-  }) => Navigator.push(
-    this,
-    MaterialPageRoute(
-        builder: (context) => target,
-        settings: RouteSettings(name: name)),
-  );
+  }) =>
+      Navigator.push(
+        this,
+        MaterialPageRoute(
+            builder: (context) => target, settings: RouteSettings(name: name)),
+      );
 
   S get locale => S.of(this);
 
