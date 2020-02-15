@@ -24,7 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(longitude) => "Longitude: ${longitude}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static _notInlinedMessages(_) => <String, Function> {
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function> {
     "_locale" : MessageLookupByLibrary.simpleMessage("en"),
     "appTitle" : MessageLookupByLibrary.simpleMessage("UV Monitor"),
     "error" : MessageLookupByLibrary.simpleMessage("Error"),
