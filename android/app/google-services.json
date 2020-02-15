@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "197145884770",
+    "firebase_url": "https://uv-monitor-c139e.firebaseio.com",
+    "project_id": "uv-monitor-c139e",
+    "storage_bucket": "uv-monitor-c139e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:197145884770:android:c1b9a105c15f188ec4f93b",
+        "android_client_info": {
+          "package_name": "my.com.uvassessment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "197145884770-7putce3recl97snbfbd25ksg24v4e0ti.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "my.com.uvassessment",
+            "certificate_hash": "7722f89c6dccdc25c335ee63ce0fb6e511a99f54"
+          }
+        },
+        {
+          "client_id": "197145884770-o3s0koke7ag3vopda91u12pbaa2ec3q4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArBwjK_kmwfN2KdclIqSjyHVR1cpD3iNo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "197145884770-o3s0koke7ag3vopda91u12pbaa2ec3q4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,14 @@
+{
+  "_locale": "en_US",
+  "appTitle": "UV Monitor",
+  "signInGoogle": "Sign in with Google",
+  "uvIndex": "UV index",
+  "refresh": "Refresh",
+  "logout": "Logout",
+  "fetching": "Fetching...",
+  "noLocation": "No Location detected",
+  "latitude": "Latitude: {latitude}",
+  "longitude": "Longitude: {longitude}",
+  "error": "Error",
+  "ok": "Ok"
+}
