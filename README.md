@@ -14,6 +14,8 @@ no monetary transaction.
 
 4. Works only for Android. I don't think even web could use this due to plugins.
 
+5. `key.jks` is also part of this sourcecode since no signing / security required for this application.
+
 ### Prerequisites
 1. Flutter
 2. Android Studio / XCode - For emulator / simulator
