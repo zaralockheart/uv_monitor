@@ -14,19 +14,33 @@ no monetary transaction.
 
 4. Works only for Android. I don't think even web could use this due to plugins.
 
-## Application Structure
+### Prerequisites
+1. Flutter
+2. Android Studio / XCode - For emulator / simulator
+3. IDE - Android Studio, IntellliJ IDEA, VSCode.
+
+### Running
+1. `flutter run` on terminal or IDE configuration setup.
+
+## Running the tests
+1. `flutter test --coverage` - This will generate [LCOV](http://ltp.sourceforge.net/coverage/lcov.php)
+
+## Formatter
+1. Run `dartfmt -w lib/ test/`
+
+## Build with
 1. Architecture.
-    1. [Flutter_bloc](https://pub.dev/packages/flutter_bloc)
-    2. [Flutter_hooks](https://pub.dev/packages/flutter_hooks)
-    3. [Equatable](https://pub.dev/packages/equatable)
-    4. [Intl](https://pub.dev/packages/intl)
+    1. [Flutter_bloc](https://pub.dev/packages/flutter_bloc) - State Management
+    2. [Flutter_hooks](https://pub.dev/packages/flutter_hooks) - Widget Lifecycle
+    3. [Equatable](https://pub.dev/packages/equatable) - Object management
+    4. [Intl](https://pub.dev/packages/intl) - Application Language management
     
     **note**: Internationalization is built with [Flutter_intl_jetbrain](https://plugins.jetbrains.com/plugin/13666-flutter-intl) plugins.
     There's also plugins for [vscode](https://marketplace.visualstudio.com/items?itemName=localizely.flutter-intl)
 
 2. Services
-    1. [Dio](https://pub.dev/packages/dio)
-    2. [Retrofit](https://pub.dev/packages/retrofit)
+    1. [Dio](https://pub.dev/packages/dio) - Network
+    2. [Retrofit](https://pub.dev/packages/retrofit) - Network Interface
     
 3. etc:
     1. [Fonts](https://pub.dev/packages/google_fonts)
@@ -82,4 +96,15 @@ flutter doctor -v
 ## Authors
 
 * [**Yusuf Rosman**](https://github.com/zaralockheart)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Special thanks to:
+1. [/r/FlutterDev](https://discordapp.com/invite/N7Yshp4)
+2. [Felix](https://twitter.com/felangelov?lang=en)
+3. Libraries Author.
 
