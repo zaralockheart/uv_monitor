@@ -15,7 +15,7 @@ your token in the url and update `main.dart` for value `UV_TOKEN`
 3. Google apikey is exposed since this is a public repo and 
 no monetary transaction.
 
-4. Works only for Android. I don't think even web could use this due to plugins.
+4. Works only for Android. It could works on iOS but I am using Linux. I don't think web could use this due to plugins.
 
 5. `key.jks` is also part of this sourcecode since no signing / security required for this application.
 
