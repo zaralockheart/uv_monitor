@@ -105,6 +105,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 * Special thanks to:
 1. [/r/FlutterDev](https://discordapp.com/invite/N7Yshp4)
-2. [Felix](https://twitter.com/felangelov?lang=en)
+2. [Felix](https://twitter.com/felangelov?lang=en) - maintainer of flutter_bloc
 3. Libraries Author.
 
