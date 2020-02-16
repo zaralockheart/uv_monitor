@@ -1,3 +1,7 @@
+[![CircleCI](https://circleci.com/gh/zaralockheart/uv_monitor.svg?style=svg)](https://circleci.com/gh/zaralockheart/uv_monitor)
+
+[![codecov](https://codecov.io/gh/zaralockheart/uv_monitor/branch/master/graph/badge.svg)](https://codecov.io/gh/zaralockheart/uv_monitor)
+
 # uv_assessment
 
 Assessment project for Enlightyx.io
