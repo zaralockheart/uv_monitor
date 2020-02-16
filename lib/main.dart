@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:uv_assessment/generated/l10n.dart';
 import 'package:uv_assessment/widget/login.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -6,6 +7,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'res/color.dart';
 
 void main() {
+
+  DotEnv().env['UV_TOKEN'] = '707a11d9393a5719b0ddd0fb9c3ba7b8';
+  DotEnv().env['UV_URL'] = 'https://api.openuv.io/api/v1/uv';
+
   runApp(MyApp(
     home: Login(),
   ));

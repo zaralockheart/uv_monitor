@@ -24,20 +24,18 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(longitude) => "Longitude: ${longitude}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "_locale": MessageLookupByLibrary.simpleMessage("en"),
-        "appTitle": MessageLookupByLibrary.simpleMessage("UV Monitor"),
-        "error": MessageLookupByLibrary.simpleMessage("Error"),
-        "fetching": MessageLookupByLibrary.simpleMessage("Fetching..."),
-        "latitude": m0,
-        "logout": MessageLookupByLibrary.simpleMessage("Logout"),
-        "longitude": m1,
-        "noLocation":
-            MessageLookupByLibrary.simpleMessage("No Location detected"),
-        "ok": MessageLookupByLibrary.simpleMessage("Ok"),
-        "refresh": MessageLookupByLibrary.simpleMessage("Refresh"),
-        "signInGoogle":
-            MessageLookupByLibrary.simpleMessage("Sign in with Google"),
-        "uvIndex": MessageLookupByLibrary.simpleMessage("UV index")
-      };
+  static _notInlinedMessages(_) => <String, Function> {
+    "_locale" : MessageLookupByLibrary.simpleMessage("en"),
+    "appTitle" : MessageLookupByLibrary.simpleMessage("UV Monitor"),
+    "error" : MessageLookupByLibrary.simpleMessage("Error"),
+    "fetching" : MessageLookupByLibrary.simpleMessage("Fetching..."),
+    "latitude" : m0,
+    "logout" : MessageLookupByLibrary.simpleMessage("Logout"),
+    "longitude" : m1,
+    "noLocation" : MessageLookupByLibrary.simpleMessage("No Location detected"),
+    "ok" : MessageLookupByLibrary.simpleMessage("Ok"),
+    "refresh" : MessageLookupByLibrary.simpleMessage("Refresh"),
+    "signInGoogle" : MessageLookupByLibrary.simpleMessage("Sign in with Google"),
+    "uvIndex" : MessageLookupByLibrary.simpleMessage("UV index")
+  };
 }

@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:uv_assessment/service/dio_config.dart';
 import 'package:uv_assessment/service/service.dart';
 import 'package:uv_assessment/utils/lib_wrapper.dart';
@@ -16,7 +17,10 @@ class UvMonitorBloc extends Bloc<UvMonitorEvent, UvMonitorState> {
   UvMonitorBloc(this.client, {this.wrapper});
 
   factory UvMonitorBloc.init() => UvMonitorBloc(
-        RestClient(dio),
+        RestClient(
+          dio,
+          baseUrl: DotEnv().env['UV_URL'],
+        ),
         wrapper: LibWrapper(),
       );
 

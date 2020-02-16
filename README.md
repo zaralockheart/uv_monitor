@@ -4,13 +4,82 @@ Assessment project for Enlightyx.io
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. This application use [Open UV](https://www.openuv.io/).
 
-A few resources to get you started if this is your first Flutter project:
+2. If the API has error due to token / attempt, generate 
+your token in the url and update `main.dart` for value `UV_TOKEN`
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+3. Google apikey is exposed since this is a public repo and 
+no monetary transaction.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+4. Works only for Android. I don't think even web could use this due to plugins.
+
+## Application Structure
+1. Architecture.
+    1. [Flutter_bloc](https://pub.dev/packages/flutter_bloc)
+    2. [Flutter_hooks](https://pub.dev/packages/flutter_hooks)
+    3. [Equatable](https://pub.dev/packages/equatable)
+    4. [Intl](https://pub.dev/packages/intl)
+    
+    **note**: Internationalization is built with [Flutter_intl_jetbrain](https://plugins.jetbrains.com/plugin/13666-flutter-intl) plugins.
+    There's also plugins for [vscode](https://marketplace.visualstudio.com/items?itemName=localizely.flutter-intl)
+
+2. Services
+    1. [Dio](https://pub.dev/packages/dio)
+    2. [Retrofit](https://pub.dev/packages/retrofit)
+    
+3. etc:
+    1. [Fonts](https://pub.dev/packages/google_fonts)
+
+
+## Screenshots
+
+![login](screenshot/login.png)
+![home](screenshot/home.png)
+
+
+## Development environment
+
+```
+flutter doctor -v
+
+[✓] Flutter (Channel master, v1.15.4-pre.82, on Linux, locale en_US.UTF-8)
+    • Flutter version 1.15.4-pre.82 at /home/yuzuriha/devenv/flutter
+    • Framework revision e481fcae52 (25 hours ago), 2020-02-14 22:34:30 -0800
+    • Engine revision d60f298d9e
+    • Dart version 2.8.0 (build 2.8.0-dev.9.0 edd64e6d5c)
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 29.0.2)
+    • Android SDK at /home/yuzuriha/Android/Sdk
+    • Android NDK location not configured (optional; useful for native profiling support)
+    • Platform android-29, build-tools 29.0.2
+    • ANDROID_HOME = /home/yuzuriha/Android/Sdk
+    • ANDROID_SDK_ROOT = /home/yuzuriha/Android/Sdk
+    • Java binary at: /home/yuzuriha/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/191.6010548/jre/bin/java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_202-release-1483-b49-5587405)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at google-chrome
+
+[!] Android Studio (version 3.5)
+    • Android Studio at /home/yuzuriha/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/191.6010548
+    ✗ Flutter plugin not installed; this adds Flutter specific functionality.
+    ✗ Dart plugin not installed; this adds Dart specific functionality.
+    • Java version OpenJDK Runtime Environment (build 1.8.0_202-release-1483-b49-5587405)
+
+[✓] IntelliJ IDEA Ultimate Edition (version 2019.3)
+    • IntelliJ at /home/yuzuriha/.local/share/JetBrains/Toolbox/apps/IDEA-U/ch-0/193.5662.53
+    • Flutter plugin version 43.0.3
+    • Dart plugin version 193.5731
+
+[✓] Connected device (3 available)
+    • Android SDK built for x86 • emulator-5554 • android-x86    • Android 10 (API 29) (emulator)
+    • Chrome                    • chrome        • web-javascript • Google Chrome 80.0.3987.100
+    • Web Server                • web-server    • web-javascript • Flutter Tools
+```
+
+## Authors
+
+* [**Yusuf Rosman**](https://github.com/zaralockheart)
+
