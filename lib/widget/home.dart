@@ -91,6 +91,8 @@ class TopScreen extends StatelessWidget {
                   state.uvFetchingState.isFetchingData
                       ? context.locale.fetching
                       : state.uvFetchingState.data?.result?.uvMax.toString(),
+                  key: const Key('uv index'),
+                  textAlign: TextAlign.center,
                   style: textTheme.headline3.copyWith(
                     fontSize: 64,
                     color: darkBlue,
@@ -113,11 +115,10 @@ class TopScreen extends StatelessWidget {
             builder: (_, state) {
               final formattedCurrentTime = DateTime.now().reFormat();
               return Text(state?.currentTime ?? formattedCurrentTime,
+                  key: const Key('time'),
                   textAlign: TextAlign.center,
                   style: textTheme.headline6.copyWith(
                     color: grey,
-                    fontSize: 18.0,
-                    fontStyle: FontStyle.normal,
                     fontWeight: FontWeight.w300,
                   ));
             },
@@ -134,6 +135,7 @@ class BottomScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final titleWhiteTheme = context.textTheme.headline6.copyWith(
       color: Colors.white,
+      fontWeight: FontWeight.w500,
     );
     return Column(
       children: <Widget>[
@@ -143,7 +145,8 @@ class BottomScreen extends StatelessWidget {
             BlocBuilder<UvMonitorBloc, UvMonitorState>(
               builder: (_, state) => Expanded(
                 child: Container(
-                  margin: const EdgeInsets.all(20),
+                  margin:
+                      const EdgeInsets.all(20).copyWith(top: 41, bottom: 27),
                   child: MaterialButton(
                     disabledColor: Colors.green[100],
                     color: green,
@@ -151,14 +154,18 @@ class BottomScreen extends StatelessWidget {
                         ? null
                         : () =>
                             context.bloc<UvMonitorBloc>().add(FetchUvData()),
-                    child: Text(context.locale.refresh, style: titleWhiteTheme),
+                    child: Text(
+                      context.locale.refresh,
+                      style: titleWhiteTheme,
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ),
               ),
             ),
             Expanded(
               child: Container(
-                margin: const EdgeInsets.all(20),
+                margin: const EdgeInsets.all(20).copyWith(top: 41, bottom: 27),
                 child: MaterialButton(
                   color: darkRed,
                   onPressed: () async {
@@ -169,6 +176,7 @@ class BottomScreen extends StatelessWidget {
                   child: Text(
                     context.locale.logout,
                     style: titleWhiteTheme,
+                    textAlign: TextAlign.center,
                   ),
                 ),
               ),
@@ -192,10 +200,14 @@ class BottomScreen extends StatelessWidget {
               children: <Widget>[
                 Text(
                   context.locale.latitude(state.latitude),
+                  textAlign: TextAlign.center,
+                  key: const Key('latitude'),
                   style: titleWhiteTheme,
                 ),
                 Text(
                   context.locale.longitude(state.longitude),
+                  textAlign: TextAlign.center,
+                  key: const Key('longitude'),
                   style: titleWhiteTheme,
                 )
               ],

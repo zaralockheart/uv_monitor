@@ -4,13 +4,9 @@ import 'package:mockito/mockito.dart';
 import 'package:uv_assessment/bloc/bloc.dart';
 import 'package:uv_assessment/bloc/uv_monitor_state.dart';
 import 'package:uv_assessment/model/model.dart';
-import 'package:uv_assessment/service/service.dart';
-import 'package:uv_assessment/utils/lib_wrapper.dart';
 import 'package:uv_assessment/utils/utils.dart';
 
-class RetrofitMock extends Mock implements RestClient {}
-
-class LibWrapperMock extends Mock implements LibWrapper {}
+import 'utilities.dart';
 
 void main() {
   final wrapper = LibWrapperMock();

@@ -7,7 +7,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'res/color.dart';
 
 void main() {
-
   DotEnv().env['UV_TOKEN'] = '707a11d9393a5719b0ddd0fb9c3ba7b8';
   DotEnv().env['UV_URL'] = 'https://api.openuv.io/api/v1/uv';
 
@@ -36,7 +35,11 @@ class MyApp extends StatelessWidget {
               fontStyle: FontStyle.normal,
               fontWeight: FontWeight.w500,
             ),
-            headline6: GoogleFonts.poppins(),
+            headline6: GoogleFonts.poppins(
+              fontStyle: FontStyle.normal,
+              fontWeight: FontWeight.w500,
+              fontSize: 18.0,
+            ),
           ),
           buttonTheme: ButtonThemeData(
             textTheme: ButtonTextTheme.primary,
