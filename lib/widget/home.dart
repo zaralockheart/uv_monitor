@@ -171,7 +171,7 @@ class BottomScreen extends StatelessWidget {
                 child: MaterialButton(
                   color: darkRed,
                   onPressed: () async {
-                    await GoogleSignIn().signOut().then(print);
+                    await GoogleSignIn().signOut();
 
                     Navigator.pop(context);
                   },
