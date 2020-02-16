@@ -7,6 +7,8 @@ import 'package:uv_assessment/bloc/uv_monitor_state.dart';
 import 'package:uv_assessment/res/color.dart';
 import 'package:uv_assessment/utils/utils.dart';
 
+/// Refer https://www.figma.com/file/TbdGiIl24TvsNqV3lIK9Dg/Assignment---Flutter?node-id=1%3A60
+/// for design.
 class Home extends HookWidget {
   final UvMonitorBloc bloc;
 
