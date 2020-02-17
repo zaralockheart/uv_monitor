@@ -125,36 +125,34 @@ void main() {
 
     final bloc = UvMonitorBloc(client, wrapper: wrapper);
 
-    // TIL: This doesn't work with object
-    // TODO(Yusuf): Find a way to make test to be able to use emitsInOrder with
-    // response object
-//    expectLater(
-//        bloc,
-//        emitsInOrder([
-//          UvMonitorState.initial(),
-//          UvMonitorState.initial().copyWith(
-//              uvFetchingState: const UvFetchingState(
-//            error: null,
-//            isFetchingData: true,
-//            data: null,
-//          )),
-//          UvMonitorState.initial().copyWith(
-//              uvFetchingState: const UvFetchingState(
-//            error: null,
-//            isFetchingData: false,
-//            data: UvIndex(
-//              result: Result(uvMax: 1000.100),
-//            ),
-//          )),
-//        ]));
+    expectLater(
+        bloc,
+        emitsInOrder([
+          UvMonitorState.initial(),
+          UvMonitorState.initial().copyWith(
+              uvFetchingState: const UvFetchingState(
+            isFetchingData: true,
+            data: null,
+            error: null,
+          )),
+          UvMonitorState.initial().copyWith(
+              uvFetchingState: const UvFetchingState(
+            error: null,
+            isFetchingData: true,
+            data: UvIndex(
+              result: Result(uvMax: 1000.100),
+            ),
+          )),
+          UvMonitorState.initial().copyWith(
+              uvFetchingState: const UvFetchingState(
+            error: null,
+            isFetchingData: false,
+            data: UvIndex(
+              result: Result(uvMax: 1000.100),
+            ),
+          )),
+        ]));
 
     bloc.add(FetchUvData());
-
-    await Future<void>.delayed(Duration.zero);
-    expect(
-        bloc.state.uvFetchingState.data,
-        const UvIndex(
-          result: Result(uvMax: 1000.100),
-        ));
   });
 }
